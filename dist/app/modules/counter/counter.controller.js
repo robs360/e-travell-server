@@ -25,6 +25,20 @@ const createCounter = (req, res) => __awaiter(void 0, void 0, void 0, function* 
         Error(err);
     }
 });
+const getAllCounter = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const query = req.query;
+        const result = yield counter_services_1.counterServices.getAllCounterFromDB(query);
+        res.status(200).json({
+            success: true,
+            message: "Counter getted successfully",
+            data: result,
+        });
+    }
+    catch (err) {
+        Error(err);
+    }
+});
 exports.counterController = {
-    createCounter
+    createCounter, getAllCounter
 };

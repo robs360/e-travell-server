@@ -5,6 +5,8 @@ const mongoose_1 = require("mongoose");
 const counterShema = new mongoose_1.Schema({
     name: { type: String, required: true },
     busNumber: { type: String, required: true },
+    logo: { type: String, required: true },
+    category: { type: String, required: true },
     date: { type: Date, required: true },
     from: { type: String, required: true },
     to: { type: String, required: true },

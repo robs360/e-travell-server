@@ -1,5 +1,5 @@
 import { RequestHandler } from "express";
-import { counterServices } from "./counter.services";
+import { counterServices, TSearch } from "./counter.services";
 
 const createCounter:RequestHandler=async (req,res)=>{
      try{
@@ -16,6 +16,21 @@ const createCounter:RequestHandler=async (req,res)=>{
      }
 }
 
+const getAllCounter:RequestHandler=async (req,res)=>{
+   try{
+    const query=req.query as unknown as TSearch
+    const result=await counterServices.getAllCounterFromDB(query)
+    res.status(200).json({
+        success: true,
+        message: "Counter getted successfully",
+        data: result,
+      });
+   }
+   catch(err:any){
+     Error(err)
+   }
+}
+
 export const counterController={
-    createCounter
+    createCounter,getAllCounter
 }

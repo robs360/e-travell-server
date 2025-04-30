@@ -1,6 +1,8 @@
 export type TCounter = {
     name: string,
     busNumber:string
+    logo:string,
+    category:string
     from: string,
     to: string,
     date: Date,
