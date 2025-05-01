@@ -9,5 +9,7 @@ export type TCounter = {
     time: string,
     rent: number,
     rating: number,
-    seat: number
+    seat: number,
+    endTime:string,
+    travellTime:string
 }

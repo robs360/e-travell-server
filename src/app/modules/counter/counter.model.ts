@@ -3,8 +3,10 @@ import { TCounter } from "./counter.interface";
 
 const counterShema=new Schema<TCounter>({
     name:{type:String,required:true},
-    busNumber:{type:String,required:true},
+    busNumber:{type:String,required:true,unique:true},
     logo:{type:String,required:true},
+    endTime:{type:String,required:true},
+    travellTime:{type:String,required:true},
     category:{type:String,required:true},
     date:{type:Date,required:true},
     from:{type:String,required:true},
