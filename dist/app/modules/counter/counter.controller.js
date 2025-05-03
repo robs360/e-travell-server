@@ -39,6 +39,21 @@ const getAllCounter = (req, res) => __awaiter(void 0, void 0, void 0, function* 
         Error(err);
     }
 });
+const getSingleCounter = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const id = req.params.id;
+        const result = yield counter_services_1.counterServices.getSingleCounterFromDB(id);
+        res.status(200).json({
+            success: true,
+            message: "Single counter getted successfully",
+            data: result,
+        });
+    }
+    catch (err) {
+        Error(err);
+    }
+});
 exports.counterController = {
-    createCounter, getAllCounter
+    createCounter, getAllCounter,
+    getSingleCounter
 };

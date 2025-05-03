@@ -9,4 +9,5 @@ const counter_controller_1 = require("./counter.controller");
 const router = express_1.default.Router();
 router.post('/create', counter_controller_1.counterController.createCounter);
 router.get('/', counter_controller_1.counterController.getAllCounter);
+router.get('/:id', counter_controller_1.counterController.getSingleCounter);
 exports.counterRoutes = router;
