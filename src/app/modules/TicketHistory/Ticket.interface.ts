@@ -8,6 +8,6 @@ export type TTicket={
     from:string,
     to:string
     BDT:number
-    tciket:string[],
+    ticket:string[],
     date:Date
 }

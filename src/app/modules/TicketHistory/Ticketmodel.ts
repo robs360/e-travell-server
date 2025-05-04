@@ -12,7 +12,7 @@ const TicketHistory =new Schema<TTicket>({
     time:{type:String,required:true},
     phone:{type:Number,required:true},
     BDT:{type:Number,required:true},
-    tciket:{type:[String],required:true},
+    ticket:{type:[String],required:true},
     date:{type:Date,required:true}
 })
 

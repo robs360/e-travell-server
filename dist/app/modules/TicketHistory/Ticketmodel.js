@@ -12,6 +12,7 @@ const TicketHistory = new mongoose_1.Schema({
     time: { type: String, required: true },
     phone: { type: Number, required: true },
     BDT: { type: Number, required: true },
-    tciket: { type: [String], required: true },
+    ticket: { type: [String], required: true },
+    date: { type: Date, required: true }
 });
 exports.ticketModel = (0, mongoose_1.model)('ticketHistory', TicketHistory);
