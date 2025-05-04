@@ -1,11 +1,16 @@
 import express from 'express'
 import { counterRoutes } from '../modules/counter/counter.routes';
+import { TicketRoutes } from '../modules/TicketHistory/ticketRoute';
 
 const router=express.Router()
 const modulesRouter = [
     {
       path: "/counter",
       route: counterRoutes,
+    }, 
+    {
+      path: "/ticket",
+      route: TicketRoutes
     }, 
   ];
   
