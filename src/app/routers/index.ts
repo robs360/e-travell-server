@@ -1,6 +1,7 @@
 import express from 'express'
 import { counterRoutes } from '../modules/counter/counter.routes';
 import { TicketRoutes } from '../modules/TicketHistory/ticketRoute';
+import { reviewRoutes } from '../modules/Review/Review.route';
 
 const router=express.Router()
 const modulesRouter = [
@@ -11,6 +12,10 @@ const modulesRouter = [
     {
       path: "/ticket",
       route: TicketRoutes
+    }, 
+    {
+      path: "/review",
+      route: reviewRoutes
     }, 
   ];
   
