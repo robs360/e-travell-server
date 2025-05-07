@@ -7,6 +7,7 @@ const reviewShema = new mongoose_1.Schema({
     image: { type: String, required: true },
     review: { type: String, required: true },
     nationality: { type: String, required: true },
+    status: { type: String, required: true },
     rating: { type: Number, required: true }
 });
 exports.reviewModel = (0, mongoose_1.model)('review', reviewShema);

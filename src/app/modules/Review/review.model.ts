@@ -9,4 +9,5 @@ const reviewShema=new Schema<TReview>({
     status:{type:String,required:true},
     rating:{type:Number,required:true}
 })
+
 export const reviewModel=model<TReview>('review',reviewShema)
