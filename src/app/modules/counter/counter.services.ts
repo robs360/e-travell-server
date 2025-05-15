@@ -11,7 +11,7 @@ const createCounterIntoDB = async (payload: TCounter) => {
 }
 
 const getAllCounterFromDB = async (search: TSearch) => {
-    
+    console.log("Search ",search)
     const searchDate = new Date(search.date);
     
     const startOfDay = new Date(searchDate.toISOString().split('T')[0] + 'T00:00:00.000Z');

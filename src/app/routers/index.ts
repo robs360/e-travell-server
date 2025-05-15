@@ -2,6 +2,7 @@ import express from 'express'
 import { counterRoutes } from '../modules/counter/counter.routes';
 import { TicketRoutes } from '../modules/TicketHistory/ticketRoute';
 import { reviewRoutes } from '../modules/Review/Review.route';
+import { topHotelRoutes } from '../modules/TopHotel/TopHotel.controller';
 
 const router=express.Router()
 const modulesRouter = [
@@ -17,6 +18,10 @@ const modulesRouter = [
       path: "/review",
       route: reviewRoutes
     }, 
+    {
+      path:'/top',
+      route:topHotelRoutes
+    }
   ];
   
   modulesRouter.forEach((route) => router.use(route.path, route.route));

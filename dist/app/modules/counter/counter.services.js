@@ -16,6 +16,7 @@ const createCounterIntoDB = (payload) => __awaiter(void 0, void 0, void 0, funct
     return result;
 });
 const getAllCounterFromDB = (search) => __awaiter(void 0, void 0, void 0, function* () {
+    console.log("Search ", search);
     const searchDate = new Date(search.date);
     const startOfDay = new Date(searchDate.toISOString().split('T')[0] + 'T00:00:00.000Z');
     const endOfDay = new Date(searchDate.toISOString().split('T')[0] + 'T23:59:59.999Z');

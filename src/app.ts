@@ -5,7 +5,7 @@ const app:Application = express()
 // http://localhost:3000
 app.use(express.json());
 app.use(cors({
-  origin: ['https://e-ticket-client-robs360-shahadats-projects-55bc8ce7.vercel.app', 'http://localhost:3000'],
+  origin: ['https://e-ticket-client-robs360-shahadats-projects-55bc8ce7.vercel.app', 'http://localhost:3000','https://e-booking.vercel.app/'],
   credentials: true, 
 }));
 
