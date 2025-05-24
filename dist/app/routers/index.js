@@ -8,6 +8,7 @@ const counter_routes_1 = require("../modules/counter/counter.routes");
 const ticketRoute_1 = require("../modules/TicketHistory/ticketRoute");
 const Review_route_1 = require("../modules/Review/Review.route");
 const TopHotel_controller_1 = require("../modules/TopHotel/TopHotel.controller");
+const user_routes_1 = require("../modules/user/user.routes");
 const router = express_1.default.Router();
 const modulesRouter = [
     {
@@ -25,6 +26,10 @@ const modulesRouter = [
     {
         path: '/top',
         route: TopHotel_controller_1.topHotelRoutes
+    },
+    {
+        path: '/user',
+        route: user_routes_1.userRoutes
     }
 ];
 modulesRouter.forEach((route) => router.use(route.path, route.route));

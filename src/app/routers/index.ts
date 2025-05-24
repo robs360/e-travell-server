@@ -3,6 +3,7 @@ import { counterRoutes } from '../modules/counter/counter.routes';
 import { TicketRoutes } from '../modules/TicketHistory/ticketRoute';
 import { reviewRoutes } from '../modules/Review/Review.route';
 import { topHotelRoutes } from '../modules/TopHotel/TopHotel.controller';
+import { userRoutes } from '../modules/user/user.routes';
 
 const router=express.Router()
 const modulesRouter = [
@@ -21,6 +22,10 @@ const modulesRouter = [
     {
       path:'/top',
       route:topHotelRoutes
+    },
+    {
+      path:'/user',
+      route:userRoutes
     }
   ];
   
